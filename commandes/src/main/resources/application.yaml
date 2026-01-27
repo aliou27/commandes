@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: commandes
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestion_commande
+    username: commande_gestion
+    password: your_password_here
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
