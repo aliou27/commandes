@@ -1,11 +1,15 @@
 package com.polytech.commandes.config;
 
 import com.polytech.commandes.entity.Client;
+import com.polytech.commandes.entity.Produit;
 import com.polytech.commandes.repository.ClientRepository;
+import com.polytech.commandes.repository.ProduitRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.math.BigDecimal;
 
 @Component
 @RequiredArgsConstructor
@@ -13,6 +17,7 @@ import org.springframework.stereotype.Component;
 public class DataInitializer implements CommandLineRunner {
 
     private final ClientRepository clientRepository;
+    private final ProduitRepository produitRepository;
 
     @Override
     public void run(String... args) {
@@ -28,6 +33,23 @@ public class DataInitializer implements CommandLineRunner {
         clientRepository.save(client3);
 
         log.info("✓ 3 clients créés");
+
+        Produit produit1 = new Produit(null, "Ordinateur Portable HP", new BigDecimal("450000"), 10);
+        Produit produit2 = new Produit(null, "Souris Sans Fil Logitech", new BigDecimal("15000"), 50);
+        Produit produit3 = new Produit(null, "Clavier Mécanique RGB", new BigDecimal("35000"), 25);
+        Produit produit4 = new Produit(null, "Écran 24 pouces Dell", new BigDecimal("125000"), 15);
+        Produit produit5 = new Produit(null, "Webcam HD", new BigDecimal("25000"), 30);
+
+        produitRepository.save(produit1);
+        produitRepository.save(produit2);
+        produitRepository.save(produit3);
+        produitRepository.save(produit4);
+        produitRepository.save(produit5);
+
+        log.info("✓ 5 produits créés");
+
         log.info("=== Initialisation terminée ===");
+
+
     }
 }

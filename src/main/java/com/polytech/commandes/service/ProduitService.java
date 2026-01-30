@@ -1,40 +1,47 @@
 package com.polytech.commandes.service;
 
-import com.polytech.commandes.entity.Commande;
-import com.polytech.commandes.repository.CommandeRepository;
+import com.polytech.commandes.entity.Produit;
+import com.polytech.commandes.repository.ProduitRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
+@Transactional
 public class ProduitService {
 
-    private CommandeRepository commandeRepository;
-    public ProduitService(CommandeRepository commandeRepository) {
-        this.commandeRepository = commandeRepository;
+    private final ProduitRepository produitRepository;
+
+    @Transactional(readOnly = true)
+    public List<Produit> findAll() {
+        return produitRepository.findAll();
     }
 
-    public List<Commande> findAll() {
-        return commandeRepository.findAll();
+    @Transactional(readOnly = true)
+    public Optional<Produit> findById(Long id) {
+        return produitRepository.findById(id);
     }
 
-    public Commande save(Commande commande) {
-        commandeRepository.save(commande);
-        return commande;
+    public Produit create(Produit produit) {
+        return produitRepository.save(produit);
     }
 
-    public Commande findById(Long id) {
-        return commandeRepository.findById(id);
+    public Produit update(Long id, Produit produitDetails) {
+        Optional<Produit> produitOpt = produitRepository.findById(id);
+        if (produitOpt.isPresent()) {
+            Produit produit = produitOpt.get();
+            produit.setNom(produitDetails.getNom());
+            produit.setPrix(produitDetails.getPrix());
+            produit.setStock(produitDetails.getStock());
+            return produitRepository.save(produit);
+        }
+        return null;
     }
 
-    public void update(Commande commande) {
-        commandeRepository.save(commande);
+    public void delete(Long id) {
+        produitRepository.deleteById(id);
     }
-
-    public void delete(Commande commande) {
-        commandeRepository.delete(commande);
-    }
-
-
-
 }
