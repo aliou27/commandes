@@ -21,13 +21,14 @@ public class Commande {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private LocalDateTime dateCommande;
 
-    /* @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20);
-     private CommandeStatus status; */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "client_id", nullable = false)
+    private Client client;
 
-   // private Client client;
-    List <LigneCommande > lignes;
+    @OneToMany(mappedBy = "commande", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LigneCommande> lignes = new ArrayList<>();
 
 }
