@@ -7,6 +7,7 @@ import com.polytech.commandes.repository.ProduitRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -17,6 +18,7 @@ import java.util.Arrays;
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@Profile("dev")
 public class DataInitializer implements CommandLineRunner {
 
     private final ClientRepository clientRepository;

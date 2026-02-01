@@ -1,14 +1,32 @@
 spring:
   application:
-    name: commandes
+    name: gestion-commandes
 
   datasource:
-    url: jdbc:mysql://localhost:3306/gestion_commande
-    username: commande_gestion
-    password: your_password_here
+    url: ${DB_URL:jdbc:mysql://localhost:3306/gestion_commande?useSSL=false&serverTimezone=UTC}
+    username: ${DB_USERNAME:commande_gestion}
+    password: ${DB_PASSWORD:your_password_here}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: create
-    show-sql: true
+      ddl-auto: ${DB_DDL_AUTO:update}   # update en dev, validate en prod
+    show-sql: ${DB_SHOW_SQL:true}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+# Configuration springdoc-openapi (Swagger)
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+  packages-to-scan: com.polytech.commandes.controller
+  paths-to-match: /api/**
+
+logging:
+  level:
+    org.springframework: INFO
