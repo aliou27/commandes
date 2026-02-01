@@ -16,6 +16,7 @@ import java.util.ArrayList;
 @AllArgsConstructor
 @Builder
 @Entity
+@Data
 
 
 public class Commande {
@@ -33,7 +34,6 @@ public class Commande {
 
     @OneToMany(mappedBy = "commande", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LigneCommande> lignes = new ArrayList<>();
-
         public Commande(LocalDate localDate, BigDecimal bigDecimal, Client client3) {
     }
 
@@ -41,4 +41,10 @@ public class Commande {
         return !lignes.isEmpty();
     }
 
+    @Enumerated(EnumType.STRING)
+    private StatusCommande status;
+
+    public void setStatus(StatusCommande statusCommande) {
+
+    }
 }
