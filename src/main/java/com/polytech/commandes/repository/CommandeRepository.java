@@ -12,7 +12,7 @@ public interface CommandeRepository extends JpaRepository<Commande, Integer> {
 
     Optional<Commande> findById(Integer id);
 
-
     Commande findById(Long id);
 
+    void deleteById(Long id);
 }
