@@ -16,30 +16,25 @@ public class ClientService {
     private final ClientRepository clientRepository;
 
     public ClientService(ClientRepository clientRepository) {
-
         this.clientRepository = clientRepository;
 
     }
 
     @Transactional(readOnly = true)
     public List<Client> findAll() {
-
         return clientRepository.findAll();
     }
 
     @Transactional(readOnly = true)
     public Optional <Client> findById(Long id) {
-
         return Optional.ofNullable(clientRepository.findById(id));
     }
 
     public Client save(Client client) {
-
         return clientRepository.save(client);
     }
 
     public void delete(Client client) {
-
         clientRepository.delete(client);
     }
 
@@ -50,7 +45,6 @@ public class ClientService {
     }
 
     public void update(Client client) {
-
         clientRepository.save(client);
     }
 

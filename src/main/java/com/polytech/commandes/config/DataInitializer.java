@@ -1,8 +1,10 @@
 package com.polytech.commandes.config;
 
 import com.polytech.commandes.entity.Client;
+import com.polytech.commandes.entity.Commande;
 import com.polytech.commandes.entity.Produit;
 import com.polytech.commandes.repository.ClientRepository;
+import com.polytech.commandes.repository.CommandeRepository;
 import com.polytech.commandes.repository.ProduitRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +12,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Component
 @RequiredArgsConstructor
@@ -18,11 +21,12 @@ public class DataInitializer implements CommandLineRunner {
 
     private final ClientRepository clientRepository;
     private final ProduitRepository produitRepository;
+    private final CommandeRepository commandeRepository;
 
     @Override
     public void run(String... args) {
-        log.info("=== Initialisation des données ===");
 
+        log.info("=== Initialisation des données ===");
 
         Client client1 = new Client(null, "Aliou Diallo", "aliou.diallo@example.com");
         Client client2 = new Client(null, "Fatou Sow", "fatou.sow@example.com");
@@ -47,6 +51,11 @@ public class DataInitializer implements CommandLineRunner {
         produitRepository.save(produit5);
 
         log.info("✓ 5 produits créés");
+
+        Commande commande1 = new Commande();
+        commande1.setClient(client1);
+
+        log.info("✓ 3 commandes créées");
 
         log.info("=== Initialisation terminée ===");
 

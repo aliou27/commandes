@@ -3,6 +3,7 @@ package com.polytech.commandes.service;
 import com.polytech.commandes.entity.Commande;
 import com.polytech.commandes.repository.CommandeRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,10 +16,12 @@ public class CommandeService {
         this.commandeRepository = commandeRepository;
     }
 
+    @Transactional(readOnly = true)
     public List<Commande> findAll() {
         return commandeRepository.findAll();
     }
 
+    @Transactional(readOnly = true)
     public Commande findById(Long id) {
         return commandeRepository.findById(id);
     }
@@ -27,8 +30,12 @@ public class CommandeService {
         return commandeRepository.save(commande);
     }
 
-    public void delete(Commande commande) {
-        commandeRepository.delete(commande);
+    public void delete(Long id) {
+        commandeRepository.deleteById(id);
+    }
+
+    public void update(Commande commande) {
+        commandeRepository.save(commande);
     }
 
 }

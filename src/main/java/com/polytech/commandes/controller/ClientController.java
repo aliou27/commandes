@@ -13,7 +13,8 @@ import java.util.Optional;
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 import static org.springframework.http.ResponseEntity.*;
 
-@RestController("/api/clients")
+@RestController
+@RequestMapping("/api/clients")
 public class ClientController {
 
     public final ClientService clientService;
@@ -35,7 +36,6 @@ public class ClientController {
        }
        return notFound().build();
     }
-
 
     @PostMapping
     public ResponseEntity<Client> createClient(@RequestBody Client client) {
