@@ -1,22 +1,24 @@
 package com.polytech.commandes.config;
 
-import com.polytech.commandes.entity.Client;
-import com.polytech.commandes.entity.Commande;
-import com.polytech.commandes.entity.Produit;
+import com.polytech.commandes.entity.*;
 import com.polytech.commandes.repository.ClientRepository;
 import com.polytech.commandes.repository.CommandeRepository;
 import com.polytech.commandes.repository.ProduitRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Arrays;
 
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@Profile("dev")
 public class DataInitializer implements CommandLineRunner {
 
     private final ClientRepository clientRepository;
@@ -52,13 +54,48 @@ public class DataInitializer implements CommandLineRunner {
 
         log.info("✓ 5 produits créés");
 
+        // ========================================
+        // 3. CRÉER DES COMMANDES AVEC LIGNES
+        // ========================================
+        log.info("🛒 Création des commandes avec lignes...");
+
+        // --- COMMANDE 1 : Aliou (CREATED) ---
         Commande commande1 = new Commande();
         commande1.setClient(client1);
+        commande1.setDateCommande(LocalDateTime.now().minusDays(2));
+        commande1.setStatus(StatusCommande.CREATED);
 
-        log.info("✓ 3 commandes créées");
+        // Ligne 1 : 2 ordinateurs
+        LigneCommande ligne1_1 = new LigneCommande();
+        ligne1_1.setCommande(commande1);
+        ligne1_1.setProduit(produit1);
+        ligne1_1.setQuantite(2);
+        ligne1_1.setPrixUnitaire(produit1.getPrix());
+
+        // Ligne 2 : 3 souris
+        LigneCommande ligne1_2 = new LigneCommande();
+        ligne1_2.setCommande(commande1);
+        ligne1_2.setProduit(produit2);
+        ligne1_2.setQuantite(3);
+        ligne1_2.setPrixUnitaire(produit2.getPrix());
+
+        commande1.setLignes(Arrays.asList(ligne1_1, ligne1_2));
+        commandeRepository.save(commande1);
+
+        BigDecimal total1 = calculateTotal(commande1);
 
         log.info("=== Initialisation terminée ===");
 
 
     }
+
+    private BigDecimal calculateTotal(Commande commande) {
+        return commande.getLignes().stream()
+                .map(ligne ->
+                        ligne.getPrixUnitaire()
+                                .multiply(BigDecimal.valueOf(ligne.getQuantite()))
+                )
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
 }
