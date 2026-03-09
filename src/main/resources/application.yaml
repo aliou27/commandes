@@ -3,20 +3,24 @@ spring:
     name: gestion-commandes
 
   datasource:
-    url: ${DB_URL:jdbc:mysql://localhost:3306/gestion_commande?useSSL=false&serverTimezone=UTC}
-    username: ${DB_USERNAME:commande_gestion}
-    password: ${DB_PASSWORD:your_password_here}
+    url: jdbc:mysql://localhost:3306/gestion_commande?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: da
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: ${DB_DDL_AUTO:update}   # update en dev, validate en prod
-    show-sql: ${DB_SHOW_SQL:true}
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
 
 server:
-  port: ${SERVER_PORT:8080}
+  port: 8080
 
-# Configuration springdoc-openapi (Swagger)
+# Configuration Swagger
 springdoc:
   api-docs:
     path: /api-docs
@@ -29,4 +33,14 @@ springdoc:
 
 logging:
   level:
+    com.polytech.commandes: DEBUG
     org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+
+# Configuration JWT
+application:
+  security:
+    jwt:
+      secret-key: Itw6ky5tkqmBRkKxcTsLpcOgf0XdsicegbGynptlqqU=
+      expiration: 86400000  # 24 heures
+
