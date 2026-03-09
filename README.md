@@ -185,6 +185,34 @@ curl -X 'POST' \
 | `test` | Tests automatisés         | create-drop  | Non               | Non         |
 | `prod` | Production / déploiement  | validate     | Non               | Non         |
 
+## Authentification et Sécurité
+
+L'API est protégée par **Spring Security 6** avec une authentification basée sur **JWT (JSON Web Tokens)** stateless.
+
+### Fonctionnalités de sécurité implémentées
+- Inscription et connexion des utilisateurs
+- Génération de token JWT à la connexion réussie
+- Validation du token sur chaque requête protégée
+- Protection des endpoints sensibles (commandes, produits, clients…)
+- Utilisation de `BCryptPasswordEncoder` pour le hachage des mots de passe
+- Filtre JWT personnalisé pour extraire et valider le token dans le header `Authorization: Bearer <token>`
+- Gestion des exceptions d'authentification (401, 403)
+
+### Endpoints d'authentification (non protégés)
+| Méthode | Endpoint              | Description                     | Corps de requête attendu                     |
+|---------|-----------------------|---------------------------------|----------------------------------------------|
+| `POST`  | `/api/auth/register`  | Inscription d'un nouvel utilisateur | `{ "email": "...", "password": "...", "nom": "..." }` |
+| `POST`  | `/api/auth/login`     | Connexion → obtention du JWT    | `{ "email": "...", "password": "..." }`      |
+
+Réponse réussie (login) :
+json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "type": "Bearer",
+  "email": "utilisateur@example.com",
+  "roles": ["ROLE_USER"]
+}
+
 ## Livrables fournis
 
 - Code source complet respectant l’architecture imposée
@@ -192,6 +220,7 @@ curl -X 'POST' \
 - Configuration multi-profils + variables d’environnement
 - Documentation OpenAPI/Swagger fonctionnelle
 - Initialisation des données en profil dev
+- Authentication avec JWT
 
 
 Aliou Ba – Février 2026
