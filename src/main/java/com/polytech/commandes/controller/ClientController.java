@@ -24,9 +24,8 @@ public class ClientController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Client>> findAll() {
-        List<Client> clients = clientService.findAll();
-        return ok().body(clients);
+    public List<Client> getAll() {
+        return List.of();
     }
 
     @GetMapping("/{id}")
@@ -38,10 +37,15 @@ public class ClientController {
     }
 
     @PostMapping
-    public ResponseEntity<Client> createClient(@RequestBody Client client) {
-        Client newClient = clientService.save(client);
-        return status(HttpStatus.CREATED).body(newClient);
+    public ResponseEntity<String> create(@RequestBody Client client) {
+        return ResponseEntity.ok("Client créé (test)");
     }
+
+//    @PostMapping
+//    public ResponseEntity<Client> createClient(@RequestBody Client client) {
+//        Client newClient = clientService.save(client);
+//        return status(HttpStatus.CREATED).body(newClient);
+//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteById(@RequestBody Client client) {
