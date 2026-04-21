@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelisation_avec_angelier" id="62A5A4BE-999B-8155-2000-763ABCAEEE63" version="3.5">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-21 16:39:31 UTC</createdTime>
+<ownerDesignName>modelisation_avec_angelier</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>62A5A4BE-999B-8155-2000-763ABCAEEE63</designId>
+</OSDM_Design>

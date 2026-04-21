@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="07BDBF78-A642-A834-63AA-E8CB3D036838" mainViewID="8639D2E5-C7F6-C7CB-4A34-53458E628364">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-21 16:39:34 UTC</createdTime>
+<ownerDesignName>modelisation_avec_angelier</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>
