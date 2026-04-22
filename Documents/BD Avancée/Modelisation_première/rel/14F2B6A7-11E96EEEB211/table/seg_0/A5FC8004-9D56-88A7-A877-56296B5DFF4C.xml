@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A5FC8004-9D56-88A7-A877-56296B5DFF4C" name="Client">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:42:41 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ClientID" id="373DF272-F044-C9AC-AE59-2D9344CA105F">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:43:04 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ClientNo" id="9359D646-491B-4AC3-32D0-6F7FB71BC914">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:43:29 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nom" id="B070A64C-DFC0-5CD5-A344-9F8708DDA9D3">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:44:13 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Prenom" id="244AECF0-A715-A983-C8AD-BB1C66A69C47">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:44:37 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telephone" id="0C1196C6-656B-3AD7-A0A0-A2075F84D91D">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:44:59 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ville" id="0B6A2061-CA70-10CE-3E92-C1827CCBA658">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:45:26 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TypeClient" id="24DC9A22-7703-1818-4207-4C6C61B9CB6C">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:46:03 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NbTransport" id="83A3A9F8-DB10-1D06-CC84-5926C9072C88">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:46:35 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MtFactureTotal" id="3CA448CC-F6CE-084B-9A14-8D1D063288CB">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:46:57 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B27C2010-EAE9-D253-0F4F-162C3869BC94" name="Client_PK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:43:04 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="373DF272-F044-C9AC-AE59-2D9344CA105F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

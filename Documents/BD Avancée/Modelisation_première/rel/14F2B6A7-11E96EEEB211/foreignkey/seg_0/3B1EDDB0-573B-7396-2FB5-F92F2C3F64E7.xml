@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3B1EDDB0-573B-7396-2FB5-F92F2C3F64E7" containerWithKeyObject="77376456-589F-236F-A3DF-41FA6A97C7CF" localFKIndex="A7214821-7110-ADF0-8572-26480B9E2DF4" name="Transport_Drone_FK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:56:14 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<referredTableLongName>Drone</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6F94D52C-1AA1-7279-DCDD-2C6D67FC714B</referredTableID>
+<keyObject>2E0D081B-BF9B-B3EB-E857-865067A11FD3</keyObject>
+<referredKeyID>2E0D081B-BF9B-B3EB-E857-865067A11FD3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>DronID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

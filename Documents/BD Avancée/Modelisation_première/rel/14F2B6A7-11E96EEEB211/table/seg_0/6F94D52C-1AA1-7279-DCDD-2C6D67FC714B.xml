@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6F94D52C-1AA1-7279-DCDD-2C6D67FC714B" name="Drone">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:35:57 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DronID" id="154B04C9-CCC2-47A8-AE9D-05D65C20967B">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:36:23 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DroneNo" id="6168ADF8-D63B-B1DB-9254-E7D73E00BB0A">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:37:15 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Capacite" id="F18D683B-9534-081D-E268-8E2B977B317F">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:37:47 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DateMiseActivite" id="17374C3B-6644-A760-7FA7-C6396EA5669C">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:38:15 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E0D081B-BF9B-B3EB-E857-865067A11FD3" name="Drone_PK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:38:39 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="154B04C9-CCC2-47A8-AE9D-05D65C20967B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

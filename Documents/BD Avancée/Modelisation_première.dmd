@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelisation_première" id="38D319B2-F606-BF2D-3415-71B7B3F53B17" version="3.5">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:22:31 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>38D319B2-F606-BF2D-3415-71B7B3F53B17</designId>
+</OSDM_Design>

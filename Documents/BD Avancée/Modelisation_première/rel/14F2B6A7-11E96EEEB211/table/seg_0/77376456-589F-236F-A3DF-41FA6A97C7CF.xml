@@ -1,0 +1,198 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="77376456-589F-236F-A3DF-41FA6A97C7CF" name="Transport">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:30:30 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TransportId" id="D8186F08-1827-0459-C106-01044D9EF5A2">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:30:59 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DateHPrevEnlev" id="C199F710-5BD8-7F84-0967-07FC72AFEB71">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:31:44 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DateHPrevLiv" id="8E716091-D70E-E684-6CBD-C2F852C410A6">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:32:17 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GPSLatEnlev" id="86ED5D60-5E6A-D9A9-BDB5-3FC8622B7D02">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:32:57 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GPSLongEnlev" id="23501AEA-045D-6E13-696B-1C56C8A3B756">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:33:21 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GPSLatLiv" id="5D57E373-EEF4-6F91-F3E8-966DC437D26C">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:33:43 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GPSLongLiv" id="CA0DB828-A208-8373-73BD-0A0ECD8E725F">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:34:03 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DateHReelEnlev" id="BB16ABEB-3726-FAE9-AECE-67070142AD80">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:34:43 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DateHReelLiv" id="B5423633-FD9F-EE64-0EBA-159FEFDE6BB8">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:35:29 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Client_ClientID" id="989745EF-97CE-705E-5F09-B1881F5F2C78">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:55:11 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22A88B97-319F-201A-434F-61F3121B8398" referredColumn="373DF272-F044-C9AC-AE59-2D9344CA105F"/>
+</associations>
+</Column>
+<Column name="Objet_ObjetId" id="72403076-96F2-89F6-6C41-EE7A08D4DCDA">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:55:29 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E46D2FE7-E18B-98F4-9343-FED11DBA4A2D" referredColumn="646EFC73-DA0C-315A-E8CD-7B45073E270D"/>
+</associations>
+</Column>
+<Column name="Drone_DronID" id="F7524D29-2C42-FC9C-EE7E-231C03EA2DB6">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:56:14 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B1EDDB0-573B-7396-2FB5-F92F2C3F64E7" referredColumn="154B04C9-CCC2-47A8-AE9D-05D65C20967B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="89C4E0FD-AF58-CD37-1DB5-B136B5479B67" name="Transport_PK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:30:59 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D8186F08-1827-0459-C106-01044D9EF5A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3315DD4-5C1C-B869-2329-57D86F01A329" name="Transport_Client_FK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:55:11 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="989745EF-97CE-705E-5F09-B1881F5F2C78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4CA6849D-75A7-7374-A823-4CDC4FF1C9F0" name="Transport_Objet_FK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:55:29 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72403076-96F2-89F6-6C41-EE7A08D4DCDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A7214821-7110-ADF0-8572-26480B9E2DF4" name="Transport_Drone_FK">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:56:14 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7524D29-2C42-FC9C-EE7E-231C03EA2DB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
