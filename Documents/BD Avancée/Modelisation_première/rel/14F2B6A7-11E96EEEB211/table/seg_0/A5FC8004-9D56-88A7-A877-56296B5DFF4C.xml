@@ -17,6 +17,8 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="ClientNo" id="9359D646-491B-4AC3-32D0-6F7FB71BC914">
@@ -125,5 +127,23 @@
 <colUsage columnID="373DF272-F044-C9AC-AE59-2D9344CA105F"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="A32F983E-AD30-16BE-2F84-48C7376922E1" name="Client__UN">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 09:39:17 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9359D646-491B-4AC3-32D0-6F7FB71BC914"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_TYPECLIENT" directorySegmentName="seg_0" id="42FB8546-0E81-AD1C-F960-755D7A950212">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 09:38:24 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[TypeClient IN ('Particulier', 'Entreprise')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>

@@ -17,7 +17,24 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TransportId" id="075ED5E7-1E72-9B6B-53E0-93DE4421DE13">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:55:49 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1AB09D41-1CBA-F600-2EAA-5F6164BEB18B" referredColumn="D8186F08-1827-0459-C106-01044D9EF5A2"/>
+</associations>
 </Column>
 <Column name="DateFacture" id="68150CF6-41ED-99D1-09F4-461FD136218C">
 <createdBy>DELL</createdBy>
@@ -77,21 +94,6 @@
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Transport_TransportId" id="075ED5E7-1E72-9B6B-53E0-93DE4421DE13">
-<createdBy>DELL</createdBy>
-<createdTime>2026-04-22 08:55:49 UTC</createdTime>
-<ownerDesignName>Modelisation_première</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="1AB09D41-1CBA-F600-2EAA-5F6164BEB18B" referredColumn="D8186F08-1827-0459-C106-01044D9EF5A2"/>
-</associations>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="0DE05D5A-5B0E-8079-4F4F-E83FD7DA27F0" name="Facturation_PK">
@@ -116,4 +118,18 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="Facturation_CK_1" directorySegmentName="seg_0" id="E3E000E5-613B-CEE8-3174-05BBF9AB0EEA">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 10:20:39 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[ModeRgIt IN ('Prelevement', 'Virement', 'Cheque', 'Especes', 'Autre') ]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="Facturation_CK_2" directorySegmentName="seg_0" id="C721709E-B356-EE91-535E-FEED253EF67B">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 10:25:07 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[MontantRglt <=  MontantFacture]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>

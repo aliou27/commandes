@@ -17,7 +17,24 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DronID" id="80E05857-D374-298D-629F-CCF57B424034">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 08:56:03 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8698CC21-2820-7E45-7DDD-C016618FE3EC" referredColumn="154B04C9-CCC2-47A8-AE9D-05D65C20967B"/>
+</associations>
 </Column>
 <Column name="DateDebut" id="F0C8D243-8D27-338E-C289-7CB8329FDD5C">
 <createdBy>DELL</createdBy>
@@ -50,21 +67,6 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Drone_DronID" id="80E05857-D374-298D-629F-CCF57B424034">
-<createdBy>DELL</createdBy>
-<createdTime>2026-04-22 08:56:03 UTC</createdTime>
-<ownerDesignName>Modelisation_première</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="8698CC21-2820-7E45-7DDD-C016618FE3EC" referredColumn="154B04C9-CCC2-47A8-AE9D-05D65C20967B"/>
-</associations>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="C94E436B-6C5E-0300-4493-38374C592B47" name="Maintenance_PK">
@@ -89,4 +91,12 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="Maintenance_CK_1" directorySegmentName="seg_0" id="EF71C5DC-9CE3-071D-BE6E-FBE190F4A470">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 10:22:14 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[TypeMaintenanace in ('PREVENTIVE', 'CORRECTIVE', 'AMELIORATIVE') ]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>

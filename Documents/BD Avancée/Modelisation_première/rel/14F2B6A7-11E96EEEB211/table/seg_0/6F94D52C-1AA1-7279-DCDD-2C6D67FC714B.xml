@@ -17,6 +17,8 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="DroneNo" id="6168ADF8-D63B-B1DB-9254-E7D73E00BB0A">
@@ -66,5 +68,24 @@
 <colUsage columnID="154B04C9-CCC2-47A8-AE9D-05D65C20967B"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="DD3F3272-7E9B-0130-F3C6-1862D7F0F445" name="Drone__UN">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 09:39:47 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6168ADF8-D63B-B1DB-9254-E7D73E00BB0A"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_DRONE_1" directorySegmentName="seg_0" id="E02AA668-DE83-6917-8241-462074E8846F">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 10:15:30 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[DroneNo IN (1,10)
+]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>

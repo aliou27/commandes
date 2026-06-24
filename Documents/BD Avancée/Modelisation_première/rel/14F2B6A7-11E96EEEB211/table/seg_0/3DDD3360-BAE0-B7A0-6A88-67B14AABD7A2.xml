@@ -16,6 +16,8 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Libelle" id="BEBBB1AE-537C-D30D-056D-74A6F2F850AA">
@@ -66,4 +68,18 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_OBJET" directorySegmentName="seg_0" id="7A6F33A9-A1D2-D189-2D6C-C3729CF43294">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 09:46:20 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[Libelle IN ('Denree', 'Electronique', 'Courrier', 'Autre')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHK_OBJET_1" directorySegmentName="seg_0" id="F5ED8466-ED57-0CFE-F921-8D1A065A8C83">
+<createdBy>DELL</createdBy>
+<createdTime>2026-04-22 10:17:32 UTC</createdTime>
+<ownerDesignName>Modelisation_première</ownerDesignName>
+<rule><![CDATA[Capacite <= 80]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>
